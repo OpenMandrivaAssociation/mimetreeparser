@@ -26,6 +26,7 @@ BuildRequires: cmake(Qt6)
 BuildRequires: cmake(Qt6Core)
 BuildRequires: cmake(Qt6Gui)
 BuildRequires: cmake(Qt6Test)
+BuildRequires: cmake(Qt6PrintSupport)
 BuildRequires: cmake(Qt6Qml)
 BuildRequires: boost-devel
 # For QCH format docs
