@@ -17,19 +17,21 @@ URL: http://kde.org/
 License: GPL
 Group: System/Libraries
 Requires: %{libname} = %{EVRD}
+BuildRequires: boost-devel
 BuildRequires: cmake
 BuildRequires: ninja
-BuildRequires: cmake(ECM)
-BuildRequires: cmake(KF6CalendarCore)
-BuildRequires: cmake(KF6Codecs)
-BuildRequires: cmake(KF6I18n)
 BuildRequires: cmake(Qt6)
 BuildRequires: cmake(Qt6Core)
 BuildRequires: cmake(Qt6Gui)
 BuildRequires: cmake(Qt6Test)
 BuildRequires: cmake(Qt6PrintSupport)
 BuildRequires: cmake(Qt6Qml)
-BuildRequires: boost-devel
+BuildRequires: cmake(ECM)
+BuildRequires: cmake(KF6CalendarCore)
+BuildRequires: cmake(KF6Codecs)
+BuildRequires: cmake(KF6I18n)
+BuildRequires: cmake(KF6WidgetsAddons)
+BuildRequires: cmake(KPim6Mime)
 # For QCH format docs
 BuildRequires: doxygen
 BuildRequires: qt6-qttools-assistant
