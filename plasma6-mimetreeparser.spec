@@ -20,6 +20,7 @@ Requires: %{libname} = %{EVRD}
 BuildRequires: cmake
 BuildRequires: ninja
 BuildRequires: cmake(ECM)
+BuildRequires: cmake(KF6CalendarCore)
 BuildRequires: cmake(KF6Codecs)
 BuildRequires: cmake(KF6I18n)
 BuildRequires: cmake(Qt6)
