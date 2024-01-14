@@ -11,9 +11,9 @@ Version:	24.01.90
 %define ftpdir stable
 %endif
 Release:	1
-Source0: http://download.kde.org/%{ftpdir}/release-service/%{version}/src/mimetreeparser-%{version}.tar.xz
+Source0: https://download.kde.org/%{ftpdir}/release-service/%{version}/src/mimetreeparser-%{version}.tar.xz
 Summary: KDE library for handling MIME types
-URL: http://kde.org/
+URL: https://kde.org/
 License: GPL
 Group: System/Libraries
 Requires: %{libname} = %{EVRD}
@@ -26,15 +26,19 @@ BuildRequires: cmake(Qt6Gui)
 BuildRequires: cmake(Qt6Test)
 BuildRequires: cmake(Qt6PrintSupport)
 BuildRequires: cmake(Qt6Qml)
+BuildRequires: cmake(Qt6QmlCore)
+BuildRequires: cmake(Qt6QmlNetwork)
 BuildRequires: cmake(ECM)
 BuildRequires: cmake(KF6CalendarCore)
 BuildRequires: cmake(KF6Codecs)
 BuildRequires: cmake(KF6I18n)
 BuildRequires: cmake(KF6WidgetsAddons)
 BuildRequires: cmake(KPim6Mime)
+BuildRequires: cmake(KPim6Mbox)
 # For QCH format docs
 BuildRequires: doxygen
 BuildRequires: qt6-qttools-assistant
+BuildRequires: qt6-qtbase-theme-gtk3
 
 %description
 KDE library for handling MIME types
