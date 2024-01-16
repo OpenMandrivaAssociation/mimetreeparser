@@ -76,6 +76,7 @@ Development files (Headers etc.) for %{name}.
 %find_lang mimetreeparser6
 
 %files -f mimetreeparser6.lang
+%{_datadir}/qlogging-categories6/mimetreeparser2.categories
 
 %files -n %{libname}
 %{_libdir}/*.so*
