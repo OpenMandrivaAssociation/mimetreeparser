@@ -1,6 +1,8 @@
 %define major 6
-%define libname %mklibname KPim6MimeTreeParser
-%define devname %mklibname KPim6MimeTreeParser -d
+%define libname %mklibname KPim6MimeTreeParserCore
+%define devname %mklibname KPim6MimeTreeParserCore -d
+%define wlibname %mklibname KPim6MimeTreeParserWidgets
+%define wdevname %mklibname KPim6MimeTreeParserWidgets -d
 
 Name: plasma6-mimetreeparser
 Version:	24.01.90
@@ -61,6 +63,23 @@ Requires: %{libname} = %{EVRD}
 %description -n %{devname}
 Development files (Headers etc.) for %{name}.
 
+%package -n %{wlibname}
+Summary: KDE library for handling MIME types (Widgets)
+Group: System/Libraries
+Requires: %{name} = %{EVRD}
+
+%description -n %{wlibname}
+KDE library for handling MIME types (Widgets)
+
+%package -n %{wdevname}
+Summary: Development files for %{name} (Widgets)
+Group: Development/C
+Requires: %{wlibname} = %{EVRD}
+Requires: %{devname} = %{EVRD}
+
+%description -n %{wdevname}
+Development files (Headers etc.) for %{name} (Widgets).
+
 %prep
 %autosetup -p1 -n mimetreeparser-%{version}
 %cmake \
@@ -79,11 +98,20 @@ Development files (Headers etc.) for %{name}.
 %{_datadir}/qlogging-categories6/mimetreeparser2.categories
 
 %files -n %{libname}
-%{_libdir}/*.so*
+%{_libdir}/libKPim6MimeTreeParserCore.so.*
+
+%files -n %{wlibname}
+%{_libdir}/libKPim6MimeTreeParserWidgets.so.*
 %{_qtdir}/qml/org/kde/pim/mimetreeparser
 
 %files -n %{devname}
-%{_includedir}/*
-%{_libdir}/cmake/*
+%{_includedir}/KPim6/MimeTreeParserCore
+%{_libdir}/cmake/KPim6MimeTreeParserCore
 %{_qtdir}/mkspecs/modules/qt_MimeTreeParserCore.pri
+%{_libdir}/libKPim6MimeTreeParserCore.so
+
+%files -n %{wdevname}
+%{_includedir}/KPim6/MimeTreeParserWidgets
+%{_libdir}/cmake/KPim6MimeTreeParserWidgets
 %{_qtdir}/mkspecs/modules/qt_MimeTreeParserWidgets.pri
+%{_libdir}/libKPim6MimeTreeParserWidgets.so
