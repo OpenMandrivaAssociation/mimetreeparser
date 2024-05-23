@@ -8,7 +8,7 @@
 %define wdevname %mklibname KPim6MimeTreeParserWidgets -d
 
 Name: plasma6-mimetreeparser
-Version:	24.02.2
+Version:	24.05.0
 %define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
 %if %{is_beta}
 %define ftpdir unstable
@@ -102,7 +102,7 @@ Development files (Headers etc.) for %{name} (Widgets).
 %find_lang mimetreeparser6
 
 %files -f mimetreeparser6.lang
-%{_datadir}/qlogging-categories6/mimetreeparser2.categories
+%{_datadir}/qlogging-categories6/mimetreeparser.categories
 
 %files -n %{libname}
 %{_libdir}/libKPim6MimeTreeParserCore.so.*
