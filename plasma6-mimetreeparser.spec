@@ -8,14 +8,14 @@
 %define wdevname %mklibname KPim6MimeTreeParserWidgets -d
 
 Name: plasma6-mimetreeparser
-Version:	24.12.3
+Version:	25.04.0
 %define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
 %if %{is_beta}
 %define ftpdir unstable
 %else
 %define ftpdir stable
 %endif
-Release:	%{?git:0.%{git}.}2
+Release:	%{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/pim/mimetreeparser/-/archive/%{gitbranch}/mimetreeparser-%{gitbranchd}.tar.bz2#/mimetreeparser-%{git}.tar.bz2
 %else
