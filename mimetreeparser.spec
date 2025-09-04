@@ -46,6 +46,7 @@ BuildRequires: cmake(KF6WidgetsAddons)
 BuildRequires: cmake(KPim6Mime)
 BuildRequires: cmake(KPim6Mbox)
 BuildRequires: cmake(KPim6Libkleo)
+BuildRequires: cmake(KF6ColorScheme)
 # For QCH format docs
 BuildRequires: doxygen
 BuildRequires: qt6-qttools-assistant
